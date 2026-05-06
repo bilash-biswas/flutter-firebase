@@ -103,7 +103,20 @@ A premium, state-of-the-art Flutter mobile application powered by **Firebase** a
     }
     ```
 
-5.  **Run the Application**:
+5.  **Set Up Cloud Firestore Rules**:
+    Go to Firebase Console -> Firestore Database -> Rules, and paste the following security rules to protect user notes partition:
+    ```javascript
+    rules_version = '2';
+    service cloud.firestore {
+      match /databases/{database}/documents {
+        match /users/{userId}/notes/{noteId} {
+          allow read, write: if request.auth != null && request.auth.uid == userId;
+        }
+      }
+    }
+    ```
+
+6.  **Run the Application**:
     ```bash
     flutter run
     ```
