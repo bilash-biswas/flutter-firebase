@@ -69,8 +69,8 @@ A premium, state-of-the-art Flutter mobile application powered by **Firebase** a
 
 1.  **Clone the Repository**:
     ```bash
-    git clone https://github.com/your-username/magic-notes.git
-    cd magic-notes
+    git clone https://github.com/bilash-biswas/flutter-firebase.git
+    cd flutter-firebase
     ```
 
 2.  **Install Dependencies**:
